@@ -16,7 +16,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500">
         {children}
         <ScrollRestoration />
         <Scripts />
