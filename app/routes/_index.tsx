@@ -1,5 +1,5 @@
 import { json, type MetaFunction } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import { getGeneralInfo } from "~/data";
 
 export const loader = async () => {
@@ -8,14 +8,14 @@ export const loader = async () => {
 }
 
 export const meta: MetaFunction<typeof loader> = ({data}) => {
-  let generalInfo = { name: 'Unknown' }
+  let generalInfo = { name: 'Unknown', heroContent: '-' }
   if (data?.generalInfo!==undefined) {
     generalInfo = data.generalInfo
   }
 
   return [
     { title: `${generalInfo.name}'s Portofolio` },
-    { name: `${generalInfo.name}'s Portofolio`, content: "" },
+    { name: `${generalInfo.name}'s Portofolio`, content: generalInfo.heroContent },
   ];
 };
 
@@ -31,7 +31,9 @@ export default function Index() {
             <p className="py-6 text-slate-200 text-lg text-wrap">
               { generalInfo.heroContent }
             </p>
-            <button className="btn btn-primary hover:bg-gradient-to-bl hover:from-blue-500 hover:to-pink-500">Start to know me!</button>
+            <button className="btn btn-primary hover:bg-gradient-to-bl hover:from-blue-500 hover:to-pink-500">
+              <Link to={'/experiences/'}>{'> Start learning about me! <'}</Link>
+            </button>
           </div>
         </div>
       </div>
