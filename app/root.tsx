@@ -30,7 +30,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500">
+      <body className="bg-gradient-to-tr from-indigo-700 via-purple-700 to-pink-700">
         {children}
         <ScrollRestoration />
         <Scripts />
