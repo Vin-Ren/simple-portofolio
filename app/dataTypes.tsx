@@ -12,7 +12,7 @@ export interface Experience {
 export enum TagType {
   Language = 'badge-primary',
   Category = 'badge-secondary',
-  Dependencies = 'badge-accent',
+  Libraries = 'badge-accent',
   Others = 'badge-ghost'
 }
 
