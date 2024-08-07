@@ -8,7 +8,7 @@ export default function ProjectEntryCard({ name, description, githubLink, tags }
       <div className="card-body">
         <h2 className="card-title text-slate-100">{name}</h2>
         <p className="text-slate-300">{description}</p>
-        <div className="card-actions justify-begin mt-2">
+        <div className="card-actions justify-begin mt-2 flex-col">
           <div className="flex gap-1 flex-wrap">
             {tags.map((e) => <div className={`badge badge-outline ${e.type}`}>{e.name}</div>)}
           </div>

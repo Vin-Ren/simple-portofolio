@@ -18,7 +18,7 @@ export default function Index() {
         <h2 className="text-2xl font-bold  text-slate-100 p-3 m-4 rounded-xl underline underline-offset-8">
           My Projects
         </h2>
-        <div className="flex flex-auto flex-wrap justify-between max-md:items-center max-lg:justify-center">
+        <div className="flex flex-auto flex-wrap justify-around max-md:items-center max-lg:justify-center">
           {projects.map((e) => <ProjectEntryCard {...e} />)}
         </div>
 
