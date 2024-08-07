@@ -63,7 +63,8 @@ export const getProjects = async (): Promise<{projects: Project[]}> => ({
       githubLink: "https://github.com/Vin-Ren/API_Template",
       tags: [
         {name: 'Python', type: TagType.Language},
-        {name: 'Framework', type: TagType.Category}
+        {name: 'Framework', type: TagType.Category},
+        {name: 'requests', type: TagType.Libraries},
       ]
     },
     {
@@ -76,6 +77,7 @@ export const getProjects = async (): Promise<{projects: Project[]}> => ({
         {name: 'Vite', type: TagType.Libraries},
         {name: 'React', type: TagType.Libraries},
         {name: 'Tailwind css', type: TagType.Libraries},
+        {name: 'Prisma', type: TagType.Libraries},
       ]
     }
   ]
