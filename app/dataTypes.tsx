@@ -20,5 +20,10 @@ export interface Project {
   name: string
   description: string
   githubLink: string
-  tags: {name: string, type: TagType}[] // category, language, frameworks, others
+  tags: {name: string, type: TagType}[]
+}
+
+export interface Contacts {
+  github: string,
+  instagram: string,
 }

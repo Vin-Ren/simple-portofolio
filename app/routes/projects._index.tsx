@@ -1,4 +1,4 @@
-import { json, useLoaderData } from "@remix-run/react";
+import { json, Link, useLoaderData } from "@remix-run/react";
 import { ImGithub } from "react-icons/im";
 import ProjectEntryCard from "~/components/projectEntryCard";
 import { getProjects } from "~/data";
@@ -18,8 +18,14 @@ export default function Index() {
         <h2 className="text-2xl font-bold  text-slate-100 p-3 m-4 rounded-xl underline underline-offset-8">
           My Projects
         </h2>
-        <div className="flex flex-auto flex-wrap">
+        <div className="flex flex-auto flex-wrap justify-between max-md:items-center max-lg:justify-center">
           {projects.map((e) => <ProjectEntryCard {...e} />)}
+        </div>
+
+        <div className="w-full flex items-center justify-center mt-12">
+          <Link to={'/socials/'} className="btn btn-primary hover:bg-gradient-to-br hover:from-blue-500 hover:to-pink-500 hover:border-none">
+            {'Contact me!'}
+          </Link>
         </div>
       </div>
     </div>

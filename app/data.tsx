@@ -1,4 +1,4 @@
-import { GeneralInfo, Experience, Project, TagType } from "./dataTypes"
+import { GeneralInfo, Experience, Project, TagType, Contacts } from "./dataTypes"
 
 export const getGeneralInfo = async (): Promise<GeneralInfo> => ({
   name: "Vincent Oei",
@@ -49,4 +49,9 @@ export const getProjects = async (): Promise<{projects: Project[]}> => ({
       ]
     }
   ]
+})
+
+export const getContacts = async (): Promise<Contacts> => ({
+  github: "Vin-Ren",
+  instagram: "vncnt.oei"
 })
