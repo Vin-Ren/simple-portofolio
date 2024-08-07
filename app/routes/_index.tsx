@@ -14,7 +14,7 @@ export default function Index() {
     <div>
       <div className="hero bg-opacity-0 min-h-screen">
         <div className="hero-content text-center">
-          <div className="max-w-lg bg-slate-800 bg-opacity-80 rounded-lg p-4">
+          <div className="max-w-lg bg-base-200 bg-opacity-80 rounded-xl p-4">
             <h1 className="text-slate-100 text-5xl font-bold">Hello there 👋</h1>
             <p className="py-6 text-slate-200 text-lg text-wrap">
               {generalInfo.heroContent}
