@@ -36,7 +36,6 @@ export const getProjects = async (): Promise<{projects: Project[]}> => ({
       tags: [
         {name: 'Typescript', type: TagType.Language},
         {name: 'Web App', type: TagType.Category},
-        {name: 'Remix', type: TagType.Libraries},
         {name: 'Vite', type: TagType.Libraries},
         {name: 'React', type: TagType.Libraries},
         {name: 'Prisma', type: TagType.Libraries},
