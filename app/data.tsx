@@ -45,7 +45,7 @@ export const getProjects = async (): Promise<{projects: Project[]}> => ({
     },
     {
       name: "Synapsis",
-      description: "A full fledged automator for phone credits transactions with API integration for full control through web requests.",
+      description: "A full fledged automator for phone credits transactions with API integration for full control through web requests",
       githubLink: "https://github.com/Vin-Ren/Synapsis-Public",
       tags: [
         {name: 'Python', type: TagType.Language},
@@ -58,7 +58,7 @@ export const getProjects = async (): Promise<{projects: Project[]}> => ({
     },
     {
       name: "API_Template",
-      description: "An API consumer template and/or library to swiften the development process of an API consumer app.",
+      description: "An API consumer template and/or library to swiften the development process of an API consumer app",
       githubLink: "https://github.com/Vin-Ren/API_Template",
       tags: [
         {name: 'Python', type: TagType.Language},
