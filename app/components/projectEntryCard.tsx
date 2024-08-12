@@ -4,7 +4,7 @@ import { Project } from "~/dataTypes";
 
 export default function ProjectEntryCard({ name, description, githubLink, tags }: Project) {
   return (
-    <div className="card m-4 bg-base-200 bg-opacity-80 w-96 shadow-2xl">
+    <div className="card m-4 bg-base-200 bg-opacity-80 max-md:w-full md:w-96 shadow-2xl">
       <div className="card-body">
         <h2 className="card-title text-slate-100">{name}</h2>
         <p className="text-slate-300">{description}</p>
