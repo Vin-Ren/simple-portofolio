@@ -22,7 +22,7 @@ export default function Index() {
           {projects.map((e) => <ProjectEntryCard {...e} />)}
         </div>
 
-        <div className="w-full flex items-center justify-center mt-12">
+        <div className="w-full flex items-center justify-center mt-12 mb-12">
           <Link to={'/socials/'} className="btn btn-primary hover:bg-gradient-to-br hover:from-blue-500 hover:to-pink-500 hover:border-none">
             {'Contact me!'}
           </Link>
