@@ -2,7 +2,7 @@ import { GeneralInfo, Experience, Project, TagType, Contacts } from "./dataTypes
 
 export const getGeneralInfo = async (): Promise<GeneralInfo> => ({
   name: "Vincent Oei",
-  heroContent: "My name is Vincent Valentino Oei, a programming enthusiast. I have quite a bit of experience in a variety of fields within programming, some of which are scripting, web development and competitive programming."
+  heroContent: "An Enthusiast in Programming and Electronics, driven by curiosity to explore more fields within programming and electronics. Aspires to create, tweak, and manage systems aimed at the improvement of humanity's quality of life."
 })
 
 
