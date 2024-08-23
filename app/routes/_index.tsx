@@ -1,5 +1,5 @@
-import { json, useOutletContext } from "@remix-run/react";
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { json } from "@remix-run/react";
+import { useEffect, useRef } from "react";
 import ExperiencesComponent from "~/components/experiencesComponent";
 import IntroComponent from "~/components/introComponent";
 import ProjectsComponent from "~/components/projectsComponent";

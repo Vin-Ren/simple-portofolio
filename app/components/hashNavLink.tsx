@@ -1,4 +1,4 @@
-import { Link, LinkProps, useLocation, useOutlet } from "@remix-run/react";
+import { Link, LinkProps } from "@remix-run/react";
 import { useEffect, useState } from "react";
 import { useSection } from "~/contexts/sections";
 

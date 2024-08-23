@@ -7,14 +7,13 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
-  useLocation,
 } from "@remix-run/react";
 import "./tailwind.css";
 import { getGeneralInfo } from "./data";
 import { RiMenu3Fill, RiFileCodeFill } from "react-icons/ri";
 import NavigationBarEntries from "./components/navigationBarEntries";
 import { MetaFunction } from "@remix-run/node";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { SectionContext } from "~/contexts/sections"
 
 
