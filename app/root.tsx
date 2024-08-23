@@ -62,7 +62,7 @@ export default function App() {
     <div id="root">
       <SectionContext.Provider value={{ currentSection, setCurrentSection }}>
       <header>
-        <div className="navbar bg-base-100 bg-opacity-85 fixed z-10">
+        <div className="navbar bg-black bg-opacity-70 fixed z-10">
           <div className="navbar-start">
             <div className="dropdown">
               <div tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -70,7 +70,7 @@ export default function App() {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-1">
+                className="menu menu-sm dropdown-content bg-black bg-opacity-80 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-1">
                 <NavigationBarEntries />
               </ul>
             </div>
@@ -95,7 +95,7 @@ export default function App() {
         <Outlet context={[currentSection, setCurrentSection] satisfies [string, Dispatch<SetStateAction<string>>]}/>
       </main>
 
-      <footer className="footer footer-center bg-slate-800 text-base-content p-4">
+      <footer className="footer footer-center bg-black bg-opacity-75 text-base-content p-4">
         <aside>
           <p>Still floating in {new Date().getFullYear()}. Created with love ❤️</p>
         </aside>

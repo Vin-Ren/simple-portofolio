@@ -32,7 +32,7 @@ export default function Index() {
         }
       },
       {
-        threshold: 0.7,
+        threshold: 0.65,
       }
     );
 

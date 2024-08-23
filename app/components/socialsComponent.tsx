@@ -16,7 +16,7 @@ export default function SocialsComponent({innerRef}:{innerRef:React.MutableRefOb
     <div ref={innerRef} id="Socials">
       <div className="hero bg-opacity-0 min-h-screen snap-center">
         <div className="hero-content min-w-full">
-          <div className="max-md:min-w-full sm:max-w-lg bg-base-200 bg-opacity-80 rounded-xl max-md:p-8 md:p-12 max-md:mx-12">
+          <div className="max-md:min-w-full sm:max-w-lg bg-black bg-opacity-60 rounded-xl max-md:p-8 md:p-12 max-md:mx-12">
             <h1 className="text-slate-100 max-md:text-3xl md:text-4xl font-bold flex flex-row gap-4 items-center">  
               <RiContactsBook3Line className="w-12 h-12"/>
               My Socials
