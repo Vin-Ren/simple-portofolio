@@ -1,9 +1,16 @@
-import { Link, LinkProps, useLocation } from "@remix-run/react";
+import { Link, LinkProps, useLocation, useOutlet } from "@remix-run/react";
+import { useEffect, useState } from "react";
+import { useSection } from "~/contexts/sections";
 
 export default function HashNavLink({to, className='', ...props}: LinkProps) {
-    const location = useLocation()
+    const {currentSection} = useSection()
+    const [currentHash, setCurrentHash] = useState("")
+
+    useEffect(()=> {
+        setCurrentHash(currentSection || "")
+    }, [currentSection])
     
     return (
-        <Link {...{to}} className={`text-md ${location.hash===to ? 'btn-active' : ''}`+className } {...props}/>
+        <Link {...{to}} className={`text-md ${'#'+currentHash===to ? 'btn-active' : ''}`+className } {...props}/>
     )
 }

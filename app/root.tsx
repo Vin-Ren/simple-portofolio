@@ -7,12 +7,15 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
+  useLocation,
 } from "@remix-run/react";
 import "./tailwind.css";
 import { getGeneralInfo } from "./data";
 import { RiMenu3Fill, RiFileCodeFill } from "react-icons/ri";
 import NavigationBarEntries from "./components/navigationBarEntries";
 import { MetaFunction } from "@remix-run/node";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { SectionContext } from "~/contexts/sections"
 
 
 export const loader = async () => {
@@ -52,11 +55,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const { generalInfo } = useLoaderData<typeof loader>()
+  const [currentSection, setCurrentSection] = useState("")
+
+  // console.log(currentSection)
 
   return (
-    <div>
+    <div id="root">
+      <SectionContext.Provider value={{ currentSection, setCurrentSection }}>
       <header>
-        <div className="navbar bg-base-100 bg-opacity-85 fixed">
+        <div className="navbar bg-base-100 bg-opacity-85 fixed z-10">
           <div className="navbar-start">
             <div className="dropdown">
               <div tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -85,8 +92,8 @@ export default function App() {
         </div>
       </header>
 
-      <main className="min-h-screen min-w-full text-slate-200">
-        <Outlet />
+      <main className="min-h-screen min-w-full text-slate-200 pt-12">
+        <Outlet context={[currentSection, setCurrentSection] satisfies [string, Dispatch<SetStateAction<string>>]}/>
       </main>
 
       <footer className="footer footer-center bg-slate-800 text-base-content p-4">
@@ -94,6 +101,7 @@ export default function App() {
           <p>Still floating in {new Date().getFullYear()}. Created with love ❤️</p>
         </aside>
       </footer>
+      </SectionContext.Provider>
     </div>
   );
 }

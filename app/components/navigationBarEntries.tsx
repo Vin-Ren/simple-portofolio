@@ -15,7 +15,7 @@ export default function NavigationBarEntries() {
   return (
     <>
       <li>
-        <HashNavLink to={''} onClick={handleClick}>
+        <HashNavLink to={'#Intro'} onClick={handleClick}>
           <BsPersonRaisedHand className="w-5 h-5" />
           Self Introduction
         </HashNavLink>
