@@ -84,5 +84,6 @@ export const getProjects = async (): Promise<{projects: Project[]}> => ({
 
 export const getContacts = async (): Promise<Contacts> => ({
   github: "Vin-Ren",
-  instagram: "vncnt.oei"
+  instagram: "vncnt.oei",
+  linkedin: "vincent-oei"
 })

@@ -1,6 +1,6 @@
 import { json, useLoaderData } from "@remix-run/react";
 import { ImGithub } from "react-icons/im";
-import { RiContactsBook3Line, RiInstagramLine } from "react-icons/ri";
+import { RiContactsBook3Line, RiInstagramLine, RiLinkedinBoxFill } from "react-icons/ri";
 import { getContacts } from "~/data";
 
 export const loader = async () => {
@@ -32,6 +32,11 @@ export default function SocialsComponent({innerRef}:{innerRef:React.MutableRefOb
                 <li>
                   <a href={`https://instagram.com/${contacts.instagram}`} target="_blank" className="flex flex-row items-center gap-2 hover:text-purple-500 visited:text-purple-200 m-4">
                         <RiInstagramLine className="w-8 h-8"/> {contacts.instagram}
+                  </a>
+                </li>
+                <li>
+                  <a href={`https://www.linkedin.com/in/${contacts.linkedin}`} target="_blank" className="flex flex-row items-center gap-2 hover:text-purple-500 visited:text-purple-200 m-4">
+                        <RiLinkedinBoxFill className="w-8 h-8"/> {contacts.linkedin}
                   </a>
                 </li>
               </ul>
