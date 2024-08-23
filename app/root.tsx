@@ -56,7 +56,7 @@ export default function App() {
   return (
     <div>
       <header>
-        <div className="navbar bg-base-100 bg-opacity-85">
+        <div className="navbar bg-base-100 bg-opacity-85 fixed">
           <div className="navbar-start">
             <div className="dropdown">
               <div tabIndex={0} className="btn btn-ghost lg:hidden">
