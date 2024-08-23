@@ -9,7 +9,7 @@ export default function ProjectsComponent({innerRef}:{innerRef:React.MutableRefO
   return (
     <div className="min-h-screen min-w-full text-slate-200 flex justify-center mt-12 snap-center" ref={innerRef} id="Projects">
       <div className="flex-1 max-w-4xl">
-        <h2 className="text-2xl font-bold  text-slate-100 p-3 m-4 rounded-xl underline underline-offset-8">
+        <h2 className="text-2xl font-bold  text-slate-100 p-3 m-4 rounded-xl underline underline-offset-8" key={"Header"}>
           My Projects
         </h2>
         <div className="flex flex-auto flex-wrap justify-around max-md:items-center max-lg:justify-center">

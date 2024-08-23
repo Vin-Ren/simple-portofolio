@@ -2,7 +2,7 @@ import { RiCodeSSlashFill } from "react-icons/ri";
 
 export default function ExperienceEntryBox({ title, description = '', timePeriod = '-' }: { title: string, description?: string, timePeriod?: string }) {
   return (
-    <div className="bg-base-200 bg-opacity-80 p-6 m-6 rounded-xl flex flex-col shadow-xl">
+    <div className="bg-base-200 bg-opacity-80 p-6 m-6 rounded-xl flex flex-col shadow-xl" key={title}>
       <div className="flex flex-row gap-2 items-center mb-2">
         <RiCodeSSlashFill className="w-6 h-6 bg-fuchsia-600 rounded-sm p-1 mb-5" />
         <div className="flex flex-col gap-1 ml-2 align-middle">
