@@ -16,7 +16,7 @@ export const getExperiences = async (): Promise<{ experiences: Experience[] }> =
     },
     {
       title: "Fullstack Web Developer",
-      description: "Made small to medium sites such as web-base attendance taker, url shortener, etc.",
+      description: "Made small to medium sites such as web-based attendance taker, url shortener, etc.",
       timePeriod: "June 2020 - Present"
     },
     {
@@ -64,6 +64,17 @@ export const getProjects = async (): Promise<{projects: Project[]}> => ({
         {name: 'Python', type: TagType.Language},
         {name: 'Framework', type: TagType.Category},
         {name: 'requests', type: TagType.Libraries},
+        {name: 'Boilerplate', type: TagType.Others}
+      ]
+    },
+    {
+      name: "AttrLinker",
+      description: "A compact python library for simplifying your properties in classes with nested and complex objects.",
+      githubLink: "https://github.com/Vin-Ren/AttrLinker",
+      tags: [
+        {name: 'Python', type: TagType.Language},
+        {name: 'Library', type: TagType.Category},
+        {name: 'Quality of Life', type: TagType.Others}
       ]
     },
     {
