@@ -59,7 +59,7 @@ export default function App() {
   // console.log(currentSection)
 
   return (
-    <div id="root">
+    <div id="root" className="select-none">
       <SectionContext.Provider value={{ currentSection, setCurrentSection }}>
       <header>
         <div className="navbar bg-black bg-opacity-70 fixed z-10">
@@ -74,16 +74,16 @@ export default function App() {
                 <NavigationBarEntries />
               </ul>
             </div>
-            <Link className="btn btn-ghost text-xl" to={'/'}>{`${generalInfo.name}'s Portofolio`}</Link>
+            <Link className="btn btn-ghost text-xl hover:animate-pulse hover:scale-105 transition-all" to={'/'}>{`${generalInfo.name}'s Portofolio`}</Link>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 gap-2">
+            <ul className="menu menu-horizontal px-1 gap-4">
               <NavigationBarEntries />
             </ul>
           </div>
           <div className="navbar-end">
             <div className="tooltip tooltip-left" data-tip={'Source Code'}>
-              <a className="btn btn-ghost" href={'https://github.com/Vin-Ren/simple-portofolio'} target="_blank" rel="noreferrer">
+              <a className="btn btn-ghost hover:scale-110 hover:animate-pulse" href={'https://github.com/Vin-Ren/simple-portofolio'} target="_blank" rel="noreferrer">
                 <RiFileCodeFill className="h-5 w-5" />
               </a>
             </div>
@@ -96,8 +96,9 @@ export default function App() {
       </main>
 
       <footer className="footer footer-center bg-black bg-opacity-75 text-base-content p-4">
-        <aside>
-          <p>Still floating in {new Date().getFullYear()}. Created with love ❤️</p>
+        <aside className="flex flex-row gap-1">
+          <p>Still floating in {new Date().getFullYear()}. Created with love </p> 
+          <p className="hover:animate-pulse transition-all">❤️</p>
         </aside>
       </footer>
       </SectionContext.Provider>
