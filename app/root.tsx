@@ -13,6 +13,8 @@ import { getGeneralInfo } from "./data";
 import { RiMenu3Fill, RiFileCodeFill } from "react-icons/ri";
 import NavigationBarEntries from "./components/navigationBarEntries";
 import { MetaFunction } from "@remix-run/node";
+import { Dispatch, SetStateAction, useState } from "react";
+import { SectionContext } from "~/contexts/sections"
 
 
 export const loader = async () => {
@@ -41,7 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-gradient-to-tr from-indigo-700 via-purple-700 to-pink-700">
+      <body className="bg-gradient-to-tr from-indigo-700 via-black to-pink-700">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -52,11 +54,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const { generalInfo } = useLoaderData<typeof loader>()
+  const [currentSection, setCurrentSection] = useState("")
+
+  // console.log(currentSection)
 
   return (
-    <div>
+    <div id="root">
+      <SectionContext.Provider value={{ currentSection, setCurrentSection }}>
       <header>
-        <div className="navbar bg-base-100 bg-opacity-85">
+        <div className="navbar bg-black bg-opacity-70 fixed z-10">
           <div className="navbar-start">
             <div className="dropdown">
               <div tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -64,7 +70,7 @@ export default function App() {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-1">
+                className="menu menu-sm dropdown-content bg-black bg-opacity-80 rounded-box z-[1] mt-3 w-52 p-2 shadow gap-1">
                 <NavigationBarEntries />
               </ul>
             </div>
@@ -85,15 +91,16 @@ export default function App() {
         </div>
       </header>
 
-      <main className="min-h-screen min-w-full text-slate-200">
-        <Outlet />
+      <main className="min-h-screen min-w-full text-slate-200 pt-12">
+        <Outlet context={[currentSection, setCurrentSection] satisfies [string, Dispatch<SetStateAction<string>>]}/>
       </main>
 
-      <footer className="footer footer-center bg-slate-800 text-base-content p-4">
+      <footer className="footer footer-center bg-black bg-opacity-75 text-base-content p-4">
         <aside>
           <p>Still floating in {new Date().getFullYear()}. Created with love ❤️</p>
         </aside>
       </footer>
+      </SectionContext.Provider>
     </div>
   );
 }

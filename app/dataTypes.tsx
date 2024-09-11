@@ -26,4 +26,5 @@ export interface Project {
 export interface Contacts {
   github: string,
   instagram: string,
+  linkedin: string
 }

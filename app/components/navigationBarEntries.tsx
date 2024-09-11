@@ -1,4 +1,4 @@
-import { NavLink } from "@remix-run/react";
+import HashNavLink from "~/components/hashNavLink";
 import { BsPersonRaisedHand } from "react-icons/bs";
 import { MdOutlineWorkHistory } from "react-icons/md";
 import { ImGithub } from "react-icons/im";
@@ -15,28 +15,28 @@ export default function NavigationBarEntries() {
   return (
     <>
       <li>
-        <NavLink to={'/'} className={({ isActive }) => `text-md ${isActive ? 'btn-active' : ''}`} onClick={handleClick}>
+        <HashNavLink to={'#Intro'} onClick={handleClick}>
           <BsPersonRaisedHand className="w-5 h-5" />
           Self Introduction
-        </NavLink>
+        </HashNavLink>
       </li>
       <li>
-        <NavLink to={'/experiences'} className={({ isActive }) => `text-md ${isActive ? 'btn-active' : ''}`} onClick={handleClick}>
+        <HashNavLink to={'#Experiences'} onClick={handleClick}>
           <MdOutlineWorkHistory className="w-5 h-5" />
           Experiences
-        </NavLink>
+        </HashNavLink>
       </li>
       <li>
-        <NavLink to={'/projects'} className={({ isActive }) => `text-md ${isActive ? 'btn-active' : ''}`} onClick={handleClick}>
+        <HashNavLink to={'#Projects'} onClick={handleClick}>
           <ImGithub className="w-5 h-5" />
           Projects
-        </NavLink>
+        </HashNavLink>
       </li>
       <li>
-        <NavLink to={'/socials'} className={({ isActive }) => `text-md ${isActive ? 'btn-active' : ''}`} onClick={handleClick}>
+        <HashNavLink to={'#Socials'} onClick={handleClick}>
           <RiContactsBook3Line className="w-5 h-5" />
           Socials
-        </NavLink>
+        </HashNavLink>
       </li>
     </>
   )

@@ -2,7 +2,7 @@ import { GeneralInfo, Experience, Project, TagType, Contacts } from "./dataTypes
 
 export const getGeneralInfo = async (): Promise<GeneralInfo> => ({
   name: "Vincent Oei",
-  heroContent: "My name is Vincent Valentino Oei, a programming enthusiast. I have quite a bit of experience in a variety of fields within programming, some of which are scripting, web development and competitive programming."
+  heroContent: "I'm Vincent Valentino Oei, an Enthusiast in Programming and Electronics, driven by curiosity to explore more fields within programming and electronics. Aspires to create, tweak, and manage systems aimed at the improvement of humanity's quality of life."
 })
 
 
@@ -16,7 +16,7 @@ export const getExperiences = async (): Promise<{ experiences: Experience[] }> =
     },
     {
       title: "Fullstack Web Developer",
-      description: "Made small to medium sites such as web-base attendance taker, url shortener, etc.",
+      description: "Made small to medium sites such as web-based attendance taker, url shortener, etc.",
       timePeriod: "June 2020 - Present"
     },
     {
@@ -64,6 +64,17 @@ export const getProjects = async (): Promise<{projects: Project[]}> => ({
         {name: 'Python', type: TagType.Language},
         {name: 'Framework', type: TagType.Category},
         {name: 'requests', type: TagType.Libraries},
+        {name: 'Boilerplate', type: TagType.Others}
+      ]
+    },
+    {
+      name: "AttrLinker",
+      description: "A compact python library for simplifying your properties in classes with nested and complex objects.",
+      githubLink: "https://github.com/Vin-Ren/AttrLinker",
+      tags: [
+        {name: 'Python', type: TagType.Language},
+        {name: 'Library', type: TagType.Category},
+        {name: 'Quality of Life', type: TagType.Others}
       ]
     },
     {
@@ -84,5 +95,6 @@ export const getProjects = async (): Promise<{projects: Project[]}> => ({
 
 export const getContacts = async (): Promise<Contacts> => ({
   github: "Vin-Ren",
-  instagram: "vncnt.oei"
+  instagram: "vncnt.oei",
+  linkedin: "vincent-oei"
 })
