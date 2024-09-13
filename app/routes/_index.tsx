@@ -16,12 +16,12 @@ export const loader = async () => {
 }
 
 export default function Index() {
-  const {setCurrentSection} = useSection()
+  const { setCurrentSection } = useSection()
   const introRef = useRef(null);
   const experiencesRef = useRef(null);
   const projectsRef = useRef(null);
   const socialsRef = useRef(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -32,7 +32,7 @@ export default function Index() {
         }
       },
       {
-        threshold: 0.65,
+        threshold: 0.375,
       }
     );
 
