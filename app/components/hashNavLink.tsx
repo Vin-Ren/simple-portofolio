@@ -17,7 +17,7 @@ export default function HashNavLink({ to, className = '', onClick, ...props }: B
 
     return (
         <button 
-            className={`text-md hover:scale-110 transition-all ${'#' + currentHash === to ? 'btn-active bg-gray-800 bg-opacity-65 scale-110' : ''}` + className}
+            className={`text-md hover:scale-110 transition-all ${'#' + currentHash === to ? 'btn-active bg-gray-900 bg-opacity-65 scale-110' : ''}` + className}
             onClick={(e) => handleClick(e)}
             {...props} />
     )
