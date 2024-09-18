@@ -9,7 +9,7 @@ export const loader = async () => {
 }
 
 
-export default function SocialsComponent({innerRef}:{innerRef:React.MutableRefObject<null>}) {
+export default function Socials({innerRef}:{innerRef:React.MutableRefObject<null>}) {
   const { contacts } = useLoaderData<typeof loader>()
 
   return (

@@ -3,7 +3,7 @@ import ExperienceEntryBox from "~/components/experienceEntryBox";
 import { loader } from "~/routes/_index";
 
 
-export default function ExperiencesComponent({innerRef}:{innerRef:React.MutableRefObject<null>}) {
+export default function Experiences({innerRef}:{innerRef:React.MutableRefObject<null>}) {
   const { experiences } = useLoaderData<typeof loader>()
 
   return (

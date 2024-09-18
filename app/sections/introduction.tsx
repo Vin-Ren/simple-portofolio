@@ -2,7 +2,7 @@ import { useLoaderData } from "@remix-run/react";
 import { loader } from "~/routes/_index";
 
 
-export default function IntroComponent({innerRef}:{innerRef:React.MutableRefObject<null>}) {
+export default function Introduction({innerRef}:{innerRef:React.MutableRefObject<null>}) {
   const { generalInfo } = useLoaderData<typeof loader>()
 
   return (

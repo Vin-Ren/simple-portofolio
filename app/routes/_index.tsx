@@ -1,9 +1,9 @@
 import { json } from "@remix-run/react";
 import { useEffect, useRef } from "react";
-import ExperiencesComponent from "~/components/experiencesComponent";
-import IntroComponent from "~/components/introComponent";
-import ProjectsComponent from "~/components/projectsComponent";
-import SocialsComponent from "~/components/socialsComponent";
+import Introduction from "~/sections/introduction";
+import Experiences from "~/sections/experiences";
+import Projects from "~/sections/projects";
+import Socials from "~/sections/socials";
 import { useSection } from "~/contexts/sections";
 import { getContacts, getExperiences, getGeneralInfo, getProjects } from "~/data";
 
@@ -68,10 +68,10 @@ export default function Index() {
 
   return (
     <div>
-      <IntroComponent innerRef={introRef} />
-      <ExperiencesComponent innerRef={experiencesRef} />
-      <ProjectsComponent innerRef={projectsRef} />
-      <SocialsComponent innerRef={socialsRef} />
+      <Introduction innerRef={introRef} />
+      <Experiences innerRef={experiencesRef} />
+      <Projects innerRef={projectsRef} />
+      <Socials innerRef={socialsRef} />
     </div>
   );
 }
