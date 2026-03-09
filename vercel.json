@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://vinren.id",
+      "permanent": true
+    }
+  ]
+}
